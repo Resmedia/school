@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Moschino Cheap And Chic</title>
-    <link href="./main.css" rel="stylesheet">
+    <link href="./main.css?_7667" rel="stylesheet">
     <link rel="shortcut icon" href="images/favicon.ico">
     <meta
             name="keywords"
@@ -14,8 +14,9 @@
             content="Compellingly actualize fully researched processes before proactive outsourcing"
     />
 </head>
-
 <body>
+
+<!--all page block-->
 <header class="header">
     <div class="container header__content">
         <div class="header__left brand">
@@ -25,21 +26,45 @@
                     BRAN<span class="text-rose">D</span>
                 </a>
             </div>
-            <div class="form-group">
-                <button class="button button-default">
-                    Browse <i class="arrow-down arrow-black"></i>
-                </button>
-                <input placeholder="Search for Item..." class="form-control"/>
-                <button class="button button-white">
+            <form class="form-group">
+                <div class="select">
+                    <label>
+                        <select required name="search">
+                            <option value="">Browse</option>
+                            <option value="1">Man</option>
+                            <option value="2">Women</option>
+                            <option value="3">Kids</option>
+                            <option value="4">Accoseriese</option>
+                            <option value="5">Featured</option>
+                            <option value="6">Hot Deals</option>
+                        </select>
+                    </label>
+                </div>
+                <input required placeholder="Search for Item..." class="form-control search"/>
+                <button type="submit" class="button button-white">
                     <i class="icon-search"></i>
                 </button>
-            </div>
+            </form>
         </div>
         <div class="header__right">
             <img alt="basket" class="basket" src="./images/basket_bleak.svg"/>
-            <button class="button button-rose">
-                My Account <i class="arrow-down arrow-white"></i>
-            </button>
+            <div class="dropdown">
+                <button onClick="triggerMenu('top-account')" class="button button-rose">
+                    My Account <i class="arrow-down arrow-white"></i>
+                </button>
+                <ul id="top-account" hidden class="dropdown__menu">
+                    <li>
+                        <a href="#" class="dropdown__menu-item">
+                            My cabinet
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="dropdown__menu-item">
+                            Logout
+                        </a>
+                    </li>
+                </ul>
+            </div>
         </div>
     </div>
 </header>
@@ -82,17 +107,36 @@
         </li>
     </ul>
 </nav>
-<section class="arrival">
-    <div class="arrival__top">
-        <div class="container">
-            <h1 class="arrival__left text-rose">
-                New Arrivals
-            </h1>
-            <div class="arrival__right">
-                Home / Men / <span class="text-rose">New Arrivals</span>
-            </div>
-        </div>
+<!--//all page block-->
+
+<!--for catalog pages-->
+<div class="catalog-nav">
+    <div class="container">
+        <h1 class="catalog-nav__left text-rose">
+            Moschino cheap and chic
+        </h1>
+        <nav class="catalog-nav__right">
+            <ul class="breadcrumbs">
+                <li>
+                    <a href="#" class="breadcrumbs_item">
+                        Home
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="breadcrumbs_item">
+                        Women
+                    </a>
+                </li>
+                <li>
+                    <span class="text-rose">Collection item</span>
+                </li>
+            </ul>
+        </nav>
     </div>
+</div>
+<!--//for catalog pages-->
+
+<section class="arrival">
     <div class="arrival__slider">
         <div class="arrival__slider-left">
             <i class="icon-chevron-left"></i>
@@ -108,9 +152,9 @@
                 <h2 class="arrival__collection text-rose">
                     WOMEN COLLECTION
                 </h2>
-                <h3 class="arrival__name">
+                <div class="arrival__name">
                     Moschino Cheap And Chic
-                </h3>
+                </div>
                 <div class="arrival__description">
                     Compellingly actualize fully researched processes before proactive outsourcing. Progressively
                     syndicate collaborative architectures before cutting-edge services. Completely visualize parallel
@@ -128,40 +172,62 @@
                     $561
                 </div>
                 <hr/>
-                <div class="arrival__settings">
+                <form class="arrival__settings">
                     <div class="arrival__select">
                         <div class="select-item">
                             <div class="select-item__name">
                                 CHOOSE COLOR
                             </div>
-                            <div class="select-form">
-                                <span class="select__text square-red">Red</span>
-                                <i class="icon-chevron-down"></i>
+                            <div class="select select-default">
+                                <label>
+                                    <select name="color" required>
+                                        <option value="">Choose</option>
+                                        <option class="square-red" value="1">Red</option>
+                                        <option class="square-blue" value="2">Blue</option>
+                                        <option class="square-green" value="3">Green</option>
+                                    </select>
+                                </label>
                             </div>
                         </div>
                         <div class="select-item">
                             <div class="select-item__name">
                                 CHOOSE SIZE
                             </div>
-                            <div class="select-form">
-                                <span class="select__text">XXL</span>
-                                <i class="icon-chevron-down"></i>
+                            <div class="select select-default">
+                                <label>
+                                    <select name="size" required>
+                                        <option value="">Choose</option>
+                                        <option value="1">XXL</option>
+                                        <option value="2">XL</option>
+                                        <option value="3">L</option>
+                                        <option value="4">M</option>
+                                        <option value="5">S</option>
+                                    </select>
+                                </label>
                             </div>
                         </div>
                         <div class="select-item">
                             <div class="select-item__name">
                                 QUANTITY
                             </div>
-                            <div class="select-form">
-                                2
-                            </div>
+                            <label>
+                                <input
+                                        name="count"
+                                        placeholder="Input count..."
+                                        minlength="1"
+                                        value="2"
+                                        required
+                                        type="number"
+                                        class="form-control"
+                                />
+                            </label>
                         </div>
                     </div>
-                    <button class="button button-lg button-rose-transparent">
+                    <button type="submit" class="button button-lg button-rose-transparent">
                         <img alt="basket" class="basket" src="./images/basket_rose.svg">
                         Add to Cart
                     </button>
-                </div>
+                </form>
             </div>
         </div>
     </div>
@@ -172,17 +238,17 @@
         <div class="row-15 featured ">
             <div class="col-md-3">
                 <div class="featured__item">
-                    <div class="image-wrapper">
+                    <a href="#" class="image-wrapper">
                         <button class="button button-transparent">
                             <img alt="basket" class="basket" src="./images/basket_white.svg">
                             Add to Cart
                         </button>
                         <div class="featured__image" style="background-image: url('./images/featured_view1.jpg')"></div>
-                    </div>
+                    </a>
                     <div class="featured__text">
-                        <div class="featured__info">
+                        <a href="#" class="featured__info">
                             Mango People T-shirt
-                        </div>
+                        </a>
                         <div class="featured__price text-rose">
                             $52.00
                         </div>
@@ -191,17 +257,17 @@
             </div>
             <div class="col-md-3">
                 <div class="featured__item">
-                    <div class="image-wrapper">
+                    <a href="#" class="image-wrapper">
                         <button class="button button-transparent">
                             <img alt="basket" class="basket" src="./images/basket_white.svg">
                             Add to Cart
                         </button>
                         <div class="featured__image" style="background-image: url('./images/featured_view2.jpg?00')"></div>
-                    </div>
+                    </a>
                     <div class="featured__text">
-                        <div class="featured__info">
+                        <a href="#" class="featured__info">
                             Mango People T-shirt
-                        </div>
+                        </a>
                         <div class="featured__price text-rose">
                             $52.00
                         </div>
@@ -210,17 +276,17 @@
             </div>
             <div class="col-md-3">
                 <div class="featured__item">
-                    <div class="image-wrapper">
+                    <a href="#" class="image-wrapper">
                         <button class="button button-transparent">
                             <img alt="basket" class="basket" src="./images/basket_white.svg">
                             Add to Cart
                         </button>
                         <div class="featured__image" style="background-image: url('./images/featured_view3.jpg')"></div>
-                    </div>
+                    </a>
                     <div class="featured__text">
-                        <div class="featured__info">
+                        <a href="#" class="featured__info">
                             Mango People T-shirt
-                        </div>
+                        </a>
                         <div class="featured__price text-rose">
                             $52.00
                         </div>
@@ -229,17 +295,17 @@
             </div>
             <div class="col-md-3">
                 <div class="featured__item">
-                    <div class="image-wrapper">
+                    <a href="#" class="image-wrapper">
                         <button class="button button-transparent">
                             <img alt="basket" class="basket" src="./images/basket_white.svg">
                             Add to Cart
                         </button>
                         <div class="featured__image" style="background-image: url('./images/featured_view4.jpg')"></div>
-                    </div>
+                    </a>
                     <div class="featured__text">
-                        <div class="featured__info">
+                        <a href="#" class="featured__info">
                             Mango People T-shirt
-                        </div>
+                        </a>
                         <div class="featured__price text-rose">
                             $52.00
                         </div>
@@ -249,12 +315,14 @@
         </div>
     </div>
 </section>
+
+<!--all page block-->
 <section class="main-additions">
     <div class="container">
         <div class="col-md-6">
             <div class="main-additions__reviews">
                 <img class="review-image" src="./images/user.png" alt="user"/>
-                <div class="review">
+                <figure  class="review">
                     <div class="review__anons">
                         “Vestibulum quis porttitor dui! Quisque viverra nunc mi,
                         a pulvinar purus condimentum a. Aliquam condimentum mattis neque sed pretium”
@@ -268,19 +336,19 @@
                         <li class="active"></li>
                         <li></li>
                     </ul>
-                </div>
+                </figure>
             </div>
         </div>
         <div class="col-md-6">
             <div class="main-additions__subscribe">
                 <div class="subscribe__name">Subscribe</div>
                 <div class="subscribe__text">FOR OUR NEWLETTER AND PROMOTION</div>
-                <div class="form-group">
-                    <input placeholder="Enter Your Email" class="form-control oval-form">
-                    <button class="button button-rose button-oval">
+                <form class="form-group">
+                    <input type="email" required placeholder="Enter Your Email" pattern="\S+@[a-z]+.[a-z]+" class="form-control oval-form">
+                    <button type="submit" class="button button-rose button-oval">
                         Subscribe
                     </button>
-                </div>
+                </form>
             </div>
         </div>
     </div>
@@ -307,7 +375,7 @@
             </div>
         </div>
         <div class="col-md-7">
-            <div class="col-md-4">
+            <nav class="col-md-4">
                 <div class="nav__name text-rose">
                     COMPANY
                 </div>
@@ -338,8 +406,8 @@
                         </a>
                     </li>
                 </ul>
-            </div>
-            <div class="col-md-4">
+            </nav>
+            <nav class="col-md-4">
                 <div class="nav__name text-rose">
                     INFORMATION
                 </div>
@@ -370,8 +438,8 @@
                         </a>
                     </li>
                 </ul>
-            </div>
-            <div class="col-md-4">
+            </nav>
+            <nav class="col-md-4">
                 <div class="nav__name text-rose">
                     SHOP CATEGORY
                 </div>
@@ -402,7 +470,7 @@
                         </a>
                     </li>
                 </ul>
-            </div>
+            </nav>
         </div>
     </div>
     <div class="copyright">
@@ -411,7 +479,7 @@
                 <div class="copyright__text">
                     © 2017 Brand All Rights Reserved.
                 </div>
-                <div class="copyright__social">
+                <aside class="copyright__social">
                     <ul>
                         <li>
                             <a class="social__button" href="#" title="FaceBook">
@@ -439,10 +507,13 @@
                             </a>
                         </li>
                     </ul>
-                </div>
+                </aside>
             </div>
         </div>
     </div>
 </footer>
+<script src="./main.js?_0078" defer></script>
+<!--//all page block-->
+
 </body>
 </html>
