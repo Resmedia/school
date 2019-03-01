@@ -1313,6 +1313,31 @@ footer .copyright {
     .catalog .catalog__pager .catalog__pager-right .button {
       float: right; }
 
+.page-block__special {
+  margin-top: 113px;
+  background-color: #222222;
+  color: #fbfbfb;
+  display: flex; }
+  .page-block__special .special__offers {
+    padding: 48px 36px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between; }
+    .page-block__special .special__offers .offer__item {
+      display: block;
+      padding: 40px 20px; }
+      .page-block__special .special__offers .offer__item .item__icon {
+        display: block;
+        margin: 0 auto 26px; }
+      .page-block__special .special__offers .offer__item .item__text-name {
+        font-weight: 700;
+        font-size: 20px;
+        text-align: center;
+        letter-spacing: 0.5px;
+        margin-bottom: 17px; }
+      .page-block__special .special__offers .offer__item .item__text-description {
+        line-height: 24px; }
+
 .arrival .arrival__slider {
   background-color: #f7f7f7;
   padding-bottom: 50px;

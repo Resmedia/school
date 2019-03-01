@@ -1765,6 +1765,42 @@ footer {
   }
 }
 
+.page-block__special {
+  margin-top: 113px;
+  background-color: $mainColor;
+  color: #fbfbfb;
+  display: flex;
+
+  .special__offers {
+    padding: 48px 36px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    .offer__item {
+      display: block;
+      padding: 40px 20px;
+
+      .item__icon {
+        display: block;
+        margin: 0 auto 26px;
+      }
+
+      .item__text-name {
+        font-weight: 700;
+        font-size: 20px;
+        text-align: center;
+        letter-spacing: 0.5px;
+        margin-bottom: 17px;
+      }
+
+      .item__text-description {
+        line-height: 24px;
+      }
+    }
+  }
+}
+
 .arrival {
   .arrival__slider {
     background-color: #f7f7f7;
