@@ -50,7 +50,6 @@ for (i = 0; i < x.length; i++) {
 }
 
 function closeAllSelect(elmnt) {
-    console.log(elmnt);
     /*a function that will close all select boxes in the document,
     except the current select box:*/
     var x, y, i, arrNo = [];

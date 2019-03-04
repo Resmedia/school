@@ -22,21 +22,32 @@
         <div class="header__left brand">
             <img class="logo" src="./images/logo.svg" alt="logo"/>
             <div class="main-name">
-                <a class="#" href="/" title="Main Page">
+                <a class="#" href="./" title="Main Page">
                     BRAN<span class="text-rose">D</span>
                 </a>
             </div>
             <form class="form-group">
-                <div class="select">
+                <div class="select mega-select">
                     <label>
                         <select required name="search">
                             <option value="">Browse</option>
-                            <option value="1">Man</option>
-                            <option value="2">Women</option>
-                            <option value="3">Kids</option>
-                            <option value="4">Accoseriese</option>
-                            <option value="5">Featured</option>
-                            <option value="6">Hot Deals</option>
+                            <option class="select__section-name" value="1">Women</option>
+                            <option value="2">Dresses</option>
+                            <option value="3">Tops</option>
+                            <option value="4">Sweaters/Knits</option>
+                            <option value="5">Jackets/Coats</option>
+                            <option value="6">Blazers</option>
+                            <option value="7">Denim</option>
+                            <option value="8">Leggings/Pants</option>
+                            <option value="9">Skirts/Shorts</option>
+                            <option value="10">Accessories </option>
+                            <option class="select__section-name" value="11">Men</option>
+                            <option value="12">Tees/Tank tops</option>
+                            <option value="13">Shirts/Polos</option>
+                            <option value="14">Sweaters</option>
+                            <option value="15">Sweatshirts/Hoodies</option>
+                            <option value="16">Blazers</option>
+                            <option value="17">Jackets/vests</option>
                         </select>
                     </label>
                 </div>
@@ -47,7 +58,67 @@
             </form>
         </div>
         <div class="header__right">
-            <img alt="basket" class="basket" src="./images/basket_bleak.svg"/>
+            <div class="basket">
+                <div class="basket__count">2</div>
+                <img alt="basket" class="basket" src="./images/basket_bleak.svg"/>
+                <div class="basket__drop-menu">
+                    <div class="drop-menu__item">
+                        <a href="./view.html"  class="drop-menu__image">
+                            <img alt="Basket" class="basket__image" src="./images/basket_m.jpg">
+                        </a>
+                        <div class="drop-menu__info">
+                            <a href="./view.html" class="info__name">
+                                Rebox Zane
+                            </a>
+                            <div class="info__stars">
+                                <i class="icon icon-star-full"></i>
+                                <i class="icon icon-star-full"></i>
+                                <i class="icon icon-star-full"></i>
+                                <i class="icon icon-star-full"></i>
+                                <i class="icon icon-star"></i>
+                            </div>
+                            <div class="info__count-price text-rose">
+                                1  x   $250
+                            </div>
+                        </div>
+                        <div class="drop-menu__remove">
+                            <i class="icon-times-circle"></i>
+                        </div>
+                    </div>
+                    <div class="drop-menu__item">
+                        <a href="./view.html" class="drop-menu__image">
+                            <img alt="Basket" class="basket__image" src="./images/basket_w.jpg">
+                        </a>
+                        <div class="drop-menu__info">
+                            <a href="./view.html" class="info__name">
+                                Rebox Zane
+                            </a>
+                            <div class="info__stars">
+                                <i class="icon icon-star-full"></i>
+                                <i class="icon icon-star-full"></i>
+                                <i class="icon icon-star-full"></i>
+                                <i class="icon icon-star-half"></i>
+                                <i class="icon icon-star"></i>
+                            </div>
+                            <div class="info__count-price text-rose">
+                                1  x   $250
+                            </div>
+                        </div>
+                        <div class="drop-menu__remove">
+                            <i class="icon-times-circle"></i>
+                        </div>
+                    </div>
+                    <div class="drop-menu__price">
+                        TOTAL <span class="price__total">$500.00</span>
+                    </div>
+                    <a class="button button-rose-transparent" href="./checkout.html">
+                        Checkout
+                    </a>
+                    <a class="button button-default" href="./cart.html">
+                        Go to cart
+                    </a>
+                </div>
+            </div>
             <div class="dropdown">
                 <button onClick="triggerMenu('top-account')" class="button button-rose">
                     My Account <i class="arrow-down arrow-white"></i>
@@ -71,39 +142,363 @@
 <nav class="nav container">
     <ul>
         <li>
-            <a href="#" class="nav__link">
+            <a href="./" class="nav__link">
                 Home
             </a>
         </li>
         <li>
-            <a href="#" class="nav__link">
+            <div class="nav__link">
                 Man
-            </a>
+                <nav class="nav__drop-menu">
+                    <div class="nav__drop-section">
+                        <h3 class="drop-section__name">
+                            Man
+                        </h3>
+                        <ul>
+                            <li><a href="./products.html" class="drop-section__link">Dresses</a></li>
+                            <li><a href="./products.html" class="drop-section__link">Tops</a></li>
+                            <li><a href="./products.html" class="drop-section__link">Sweaters/Knits</a></li>
+                            <li><a href="./products.html" class="drop-section__link">Jackets/Coats</a></li>
+                            <li><a href="./products.html" class="drop-section__link">Blazers</a></li>
+                            <li><a href="./products.html" class="drop-section__link">Denim</a></li>
+                            <li><a href="./products.html" class="drop-section__link">Leggings/Pants</a></li>
+                            <li><a href="./products.html" class="drop-section__link">Skirts/Shorts</a></li>
+                            <li><a href="./products.html" class="drop-section__link">Accessories </a></li>
+                        </ul>
+                    </div>
+                    <div class="nav__drop-section">
+                        <h3 class="drop-section__name">
+                            Man
+                        </h3>
+                        <ul>
+                            <li><a href="./products.html" class="drop-section__link">Dresses</a></li>
+                            <li><a href="./products.html" class="drop-section__link">Tops</a></li>
+                            <li><a href="./products.html" class="drop-section__link">Sweaters/Knits</a></li>
+                            <li><a href="./products.html" class="drop-section__link">Jackets/Coats</a></li>
+                        </ul>
+                        <h3 class="drop-section__name">
+                            Man
+                        </h3>
+                        <ul>
+                            <li><a href="./products.html" class="drop-section__link">Dresses</a></li>
+                            <li><a href="./products.html" class="drop-section__link">Tops</a></li>
+                            <li><a href="./products.html" class="drop-section__link">Sweaters/Knits</a></li>
+                        </ul>
+                    </div>
+                    <div class="nav__drop-section">
+                        <h3 class="drop-section__name">
+                            Man
+                        </h3>
+                        <ul>
+                            <li><a href="./products.html" class="drop-section__link">Dresses</a></li>
+                            <li><a href="./products.html" class="drop-section__link">Tops</a></li>
+                            <li><a href="./products.html" class="drop-section__link">Sweaters/Knits</a></li>
+                            <li><a href="./products.html" class="drop-section__link">Jackets/Coats</a></li>
+                        </ul>
+                        <a href="./view.html" class="drop-section__sale">
+                            <img src="./images/sale.jpg" alt="" class="drop-section__sale-image" />
+                            <div class="drop-section__sale-text">
+                                Super sale!
+                            </div>
+                        </a>
+                    </div>
+                </nav>
+            </div>
         </li>
         <li>
-            <a href="#" class="nav__link">
+            <div class="nav__link">
                 Women
-            </a>
+                <nav class="nav__drop-menu">
+                    <div class="nav__drop-section">
+                        <h3 class="drop-section__name">
+                            Women
+                        </h3>
+                        <ul>
+                            <li><a href="./products.html" class="drop-section__link">Dresses</a></li>
+                            <li><a href="./products.html" class="drop-section__link">Tops</a></li>
+                            <li><a href="./products.html" class="drop-section__link">Sweaters/Knits</a></li>
+                            <li><a href="./products.html" class="drop-section__link">Jackets/Coats</a></li>
+                            <li><a href="./products.html" class="drop-section__link">Blazers</a></li>
+                            <li><a href="./products.html" class="drop-section__link">Denim</a></li>
+                            <li><a href="./products.html" class="drop-section__link">Leggings/Pants</a></li>
+                            <li><a href="./products.html" class="drop-section__link">Skirts/Shorts</a></li>
+                            <li><a href="./products.html" class="drop-section__link">Accessories </a></li>
+                        </ul>
+                    </div>
+                    <div class="nav__drop-section">
+                        <h3 class="drop-section__name">
+                            Women
+                        </h3>
+                        <ul>
+                            <li><a href="./products.html" class="drop-section__link">Dresses</a></li>
+                            <li><a href="./products.html" class="drop-section__link">Tops</a></li>
+                            <li><a href="./products.html" class="drop-section__link">Sweaters/Knits</a></li>
+                            <li><a href="./products.html" class="drop-section__link">Jackets/Coats</a></li>
+                        </ul>
+                        <h3 class="drop-section__name">
+                            Women
+                        </h3>
+                        <ul>
+                            <li><a href="./products.html" class="drop-section__link">Dresses</a></li>
+                            <li><a href="./products.html" class="drop-section__link">Tops</a></li>
+                            <li><a href="./products.html" class="drop-section__link">Sweaters/Knits</a></li>
+                        </ul>
+                    </div>
+                    <div class="nav__drop-section">
+                        <h3 class="drop-section__name">
+                            Women
+                        </h3>
+                        <ul>
+                            <li><a href="./products.html" class="drop-section__link">Dresses</a></li>
+                            <li><a href="./products.html" class="drop-section__link">Tops</a></li>
+                            <li><a href="./products.html" class="drop-section__link">Sweaters/Knits</a></li>
+                            <li><a href="./products.html" class="drop-section__link">Jackets/Coats</a></li>
+                        </ul>
+                        <a href="./view.html" class="drop-section__sale">
+                            <img src="./images/sale.jpg" alt="" class="drop-section__sale-image" />
+                            <div class="drop-section__sale-text">
+                                Super sale!
+                            </div>
+                        </a>
+                    </div>
+                </nav>
+            </div>
         </li>
         <li>
-            <a href="#" class="nav__link">
+            <div class="nav__link">
                 Kids
-            </a>
+                <nav class="nav__drop-menu">
+                    <div class="nav__drop-section">
+                        <h3 class="drop-section__name">
+                            Kids
+                        </h3>
+                        <ul>
+                            <li><a href="./products.html" class="drop-section__link">Dresses</a></li>
+                            <li><a href="./products.html" class="drop-section__link">Tops</a></li>
+                            <li><a href="./products.html" class="drop-section__link">Sweaters/Knits</a></li>
+                            <li><a href="./products.html" class="drop-section__link">Jackets/Coats</a></li>
+                            <li><a href="./products.html" class="drop-section__link">Blazers</a></li>
+                            <li><a href="./products.html" class="drop-section__link">Denim</a></li>
+                            <li><a href="./products.html" class="drop-section__link">Leggings/Pants</a></li>
+                            <li><a href="./products.html" class="drop-section__link">Skirts/Shorts</a></li>
+                            <li><a href="./products.html" class="drop-section__link">Accessories </a></li>
+                        </ul>
+                    </div>
+                    <div class="nav__drop-section">
+                        <h3 class="drop-section__name">
+                            Kids
+                        </h3>
+                        <ul>
+                            <li><a href="./products.html" class="drop-section__link">Dresses</a></li>
+                            <li><a href="./products.html" class="drop-section__link">Tops</a></li>
+                            <li><a href="./products.html" class="drop-section__link">Sweaters/Knits</a></li>
+                            <li><a href="./products.html" class="drop-section__link">Jackets/Coats</a></li>
+                        </ul>
+                        <h3 class="drop-section__name">
+                            Kids
+                        </h3>
+                        <ul>
+                            <li><a href="./products.html" class="drop-section__link">Dresses</a></li>
+                            <li><a href="./products.html" class="drop-section__link">Tops</a></li>
+                            <li><a href="./products.html" class="drop-section__link">Sweaters/Knits</a></li>
+                        </ul>
+                    </div>
+                    <div class="nav__drop-section">
+                        <h3 class="drop-section__name">
+                            Kids
+                        </h3>
+                        <ul>
+                            <li><a href="./products.html" class="drop-section__link">Dresses</a></li>
+                            <li><a href="./products.html" class="drop-section__link">Tops</a></li>
+                            <li><a href="./products.html" class="drop-section__link">Sweaters/Knits</a></li>
+                            <li><a href="./products.html" class="drop-section__link">Jackets/Coats</a></li>
+                        </ul>
+                        <a href="./view.html" class="drop-section__sale">
+                            <img src="./images/sale.jpg" alt="" class="drop-section__sale-image" />
+                            <div class="drop-section__sale-text">
+                                Super sale!
+                            </div>
+                        </a>
+                    </div>
+                </nav>
+            </div>
         </li>
         <li>
-            <a href="#" class="nav__link">
+            <div class="nav__link">
                 Accoseriese
-            </a>
+                <nav class="nav__drop-menu">
+                    <div class="nav__drop-section">
+                        <h3 class="drop-section__name">
+                            Accoseriese
+                        </h3>
+                        <ul>
+                            <li><a href="./products.html" class="drop-section__link">Dresses</a></li>
+                            <li><a href="./products.html" class="drop-section__link">Tops</a></li>
+                            <li><a href="./products.html" class="drop-section__link">Sweaters/Knits</a></li>
+                            <li><a href="./products.html" class="drop-section__link">Jackets/Coats</a></li>
+                            <li><a href="./products.html" class="drop-section__link">Blazers</a></li>
+                            <li><a href="./products.html" class="drop-section__link">Denim</a></li>
+                            <li><a href="./products.html" class="drop-section__link">Leggings/Pants</a></li>
+                            <li><a href="./products.html" class="drop-section__link">Skirts/Shorts</a></li>
+                            <li><a href="./products.html" class="drop-section__link">Accessories </a></li>
+                        </ul>
+                    </div>
+                    <div class="nav__drop-section">
+                        <h3 class="drop-section__name">
+                            Accoseriese
+                        </h3>
+                        <ul>
+                            <li><a href="./products.html" class="drop-section__link">Dresses</a></li>
+                            <li><a href="./products.html" class="drop-section__link">Tops</a></li>
+                            <li><a href="./products.html" class="drop-section__link">Sweaters/Knits</a></li>
+                            <li><a href="./products.html" class="drop-section__link">Jackets/Coats</a></li>
+                        </ul>
+                        <h3 class="drop-section__name">
+                            Accoseriese
+                        </h3>
+                        <ul>
+                            <li><a href="./products.html" class="drop-section__link">Dresses</a></li>
+                            <li><a href="./products.html" class="drop-section__link">Tops</a></li>
+                            <li><a href="./products.html" class="drop-section__link">Sweaters/Knits</a></li>
+                        </ul>
+                    </div>
+                    <div class="nav__drop-section">
+                        <h3 class="drop-section__name">
+                            Accoseriese
+                        </h3>
+                        <ul>
+                            <li><a href="./products.html" class="drop-section__link">Dresses</a></li>
+                            <li><a href="./products.html" class="drop-section__link">Tops</a></li>
+                            <li><a href="./products.html" class="drop-section__link">Sweaters/Knits</a></li>
+                            <li><a href="./products.html" class="drop-section__link">Jackets/Coats</a></li>
+                        </ul>
+                        <a href="./view.html" class="drop-section__sale">
+                            <img src="./images/sale.jpg" alt="" class="drop-section__sale-image" />
+                            <div class="drop-section__sale-text">
+                                Super sale!
+                            </div>
+                        </a>
+                    </div>
+                </nav>
+            </div>
         </li>
         <li>
-            <a href="#" class="nav__link">
+            <div class="nav__link">
                 Featured
-            </a>
+                <nav class="nav__drop-menu">
+                    <div class="nav__drop-section">
+                        <h3 class="drop-section__name">
+                            Featured
+                        </h3>
+                        <ul>
+                            <li><a href="./products.html" class="drop-section__link">Dresses</a></li>
+                            <li><a href="./products.html" class="drop-section__link">Tops</a></li>
+                            <li><a href="./products.html" class="drop-section__link">Sweaters/Knits</a></li>
+                            <li><a href="./products.html" class="drop-section__link">Jackets/Coats</a></li>
+                            <li><a href="./products.html" class="drop-section__link">Blazers</a></li>
+                            <li><a href="./products.html" class="drop-section__link">Denim</a></li>
+                            <li><a href="./products.html" class="drop-section__link">Leggings/Pants</a></li>
+                            <li><a href="./products.html" class="drop-section__link">Skirts/Shorts</a></li>
+                            <li><a href="./products.html" class="drop-section__link">Accessories </a></li>
+                        </ul>
+                    </div>
+                    <div class="nav__drop-section">
+                        <h3 class="drop-section__name">
+                            Featured
+                        </h3>
+                        <ul>
+                            <li><a href="./products.html" class="drop-section__link">Dresses</a></li>
+                            <li><a href="./products.html" class="drop-section__link">Tops</a></li>
+                            <li><a href="./products.html" class="drop-section__link">Sweaters/Knits</a></li>
+                            <li><a href="./products.html" class="drop-section__link">Jackets/Coats</a></li>
+                        </ul>
+                        <h3 class="drop-section__name">
+                            Featured
+                        </h3>
+                        <ul>
+                            <li><a href="./products.html" class="drop-section__link">Dresses</a></li>
+                            <li><a href="./products.html" class="drop-section__link">Tops</a></li>
+                            <li><a href="./products.html" class="drop-section__link">Sweaters/Knits</a></li>
+                        </ul>
+                    </div>
+                    <div class="nav__drop-section">
+                        <h3 class="drop-section__name">
+                            Featured
+                        </h3>
+                        <ul>
+                            <li><a href="./products.html" class="drop-section__link">Dresses</a></li>
+                            <li><a href="./products.html" class="drop-section__link">Tops</a></li>
+                            <li><a href="./products.html" class="drop-section__link">Sweaters/Knits</a></li>
+                            <li><a href="./products.html" class="drop-section__link">Jackets/Coats</a></li>
+                        </ul>
+                        <a href="./view.html" class="drop-section__sale">
+                            <img src="./images/sale.jpg" alt="" class="drop-section__sale-image" />
+                            <div class="drop-section__sale-text">
+                                Super sale!
+                            </div>
+                        </a>
+                    </div>
+                </nav>
+            </div>
         </li>
         <li>
-            <a href="#" class="nav__link">
+            <div class="nav__link">
                 Hot Deals
-            </a>
+                <nav class="nav__drop-menu">
+                    <div class="nav__drop-section">
+                        <h3 class="drop-section__name">
+                            Hot Deals
+                        </h3>
+                        <ul>
+                            <li><a href="./products.html" class="drop-section__link">Dresses</a></li>
+                            <li><a href="./products.html" class="drop-section__link">Tops</a></li>
+                            <li><a href="./products.html" class="drop-section__link">Sweaters/Knits</a></li>
+                            <li><a href="./products.html" class="drop-section__link">Jackets/Coats</a></li>
+                            <li><a href="./products.html" class="drop-section__link">Blazers</a></li>
+                            <li><a href="./products.html" class="drop-section__link">Denim</a></li>
+                            <li><a href="./products.html" class="drop-section__link">Leggings/Pants</a></li>
+                            <li><a href="./products.html" class="drop-section__link">Skirts/Shorts</a></li>
+                            <li><a href="./products.html" class="drop-section__link">Accessories </a></li>
+                        </ul>
+                    </div>
+                    <div class="nav__drop-section">
+                        <h3 class="drop-section__name">
+                            Hot Deals
+                        </h3>
+                        <ul>
+                            <li><a href="./products.html" class="drop-section__link">Dresses</a></li>
+                            <li><a href="./products.html" class="drop-section__link">Tops</a></li>
+                            <li><a href="./products.html" class="drop-section__link">Sweaters/Knits</a></li>
+                            <li><a href="./products.html" class="drop-section__link">Jackets/Coats</a></li>
+                        </ul>
+                        <h3 class="drop-section__name">
+                            Hot Deals
+                        </h3>
+                        <ul>
+                            <li><a href="./products.html" class="drop-section__link">Dresses</a></li>
+                            <li><a href="./products.html" class="drop-section__link">Tops</a></li>
+                            <li><a href="./products.html" class="drop-section__link">Sweaters/Knits</a></li>
+                        </ul>
+                    </div>
+                    <div class="nav__drop-section">
+                        <h3 class="drop-section__name">
+                            Hot Deals
+                        </h3>
+                        <ul>
+                            <li><a href="./products.html" class="drop-section__link">Dresses</a></li>
+                            <li><a href="./products.html" class="drop-section__link">Tops</a></li>
+                            <li><a href="./products.html" class="drop-section__link">Sweaters/Knits</a></li>
+                            <li><a href="./products.html" class="drop-section__link">Jackets/Coats</a></li>
+                        </ul>
+                        <a href="./view.html" class="drop-section__sale">
+                            <img src="./images/sale.jpg" alt="" class="drop-section__sale-image" />
+                            <div class="drop-section__sale-text">
+                                Super sale!
+                            </div>
+                        </a>
+                    </div>
+                </nav>
+            </div>
         </li>
     </ul>
 </nav>
@@ -126,7 +521,7 @@
     <section class="main-block__offer">
         <div class="row-10">
             <div class="col-md-6">
-                <div class="offer__item">
+                <a href="./products.html" class="offer__item">
                     <div class="offer__text">
                         <h3 class="offer__info">
                             HOT DEAL
@@ -136,8 +531,8 @@
                         </h4>
                     </div>
                     <img src="./images/offer1.jpg" alt="offer"/>
-                </div>
-                <div class="offer__item">
+                </a>
+                <a href="./products.html" class="offer__item">
                     <div class="offer__text">
                         <h3 class="offer__info">
                             LUXIROUS & trendy
@@ -147,10 +542,10 @@
                         </h4>
                     </div>
                     <img src="./images/offer2.jpg" alt="offer"/>
-                </div>
+                </a>
             </div>
             <div class="col-md-6">
-                <div class="offer__item">
+                <a href="./products.html" class="offer__item">
                     <div class="offer__text">
                         <h3 class="offer__info">
                             30% offer
@@ -160,8 +555,8 @@
                         </h4>
                     </div>
                     <img src="./images/offer3.jpg" alt="offer"/>
-                </div>
-                <div class="offer__item">
+                </a>
+                <a href="./products.html" class="offer__item">
                     <div class="offer__text">
                         <h3 class="offer__info">
                             new arrivals
@@ -171,7 +566,7 @@
                         </h4>
                     </div>
                     <img src="./images/offer4.jpg" alt="offer"/>
-                </div>
+                </a>
             </div>
         </div>
     </section>
@@ -185,15 +580,17 @@
         <div class="row-15">
             <div class="col-md-3">
                 <div class="featured__item">
-                    <a href="#" class="image-wrapper">
-                        <button class="button button-transparent">
-                            <img alt="basket" class="basket" src="./images/basket_white.svg">
-                            Add to Cart
-                        </button>
+                    <a href="./view.html" class="image-wrapper">
+                        <div class="featured__buttons">
+                            <button class="button button-transparent">
+                                <img alt="basket" class="basket" src="./images/basket_white.svg">
+                                Add to Cart
+                            </button>
+                        </div>
                         <div class="featured__image" style="background-image: url('./images/featured1.jpg')"></div>
                     </a>
                     <div class="featured__text">
-                        <a href="#" class="featured__info">
+                        <a href="./view.html" class="featured__info">
                             Mango People T-shirt
                         </a>
                         <div class="featured__price text-rose">
@@ -204,15 +601,17 @@
             </div>
             <div class="col-md-3">
                 <div class="featured__item">
-                    <a href="#" class="image-wrapper">
-                        <button class="button button-transparent">
-                            <img alt="basket" class="basket" src="./images/basket_white.svg">
-                            Add to Cart
-                        </button>
+                    <a href="./view.html" class="image-wrapper">
+                        <div class="featured__buttons">
+                            <button class="button button-transparent">
+                                <img alt="basket" class="basket" src="./images/basket_white.svg">
+                                Add to Cart
+                            </button>
+                        </div>
                         <div class="featured__image" style="background-image: url('./images/featured2.jpg')"></div>
                     </a>
                     <div class="featured__text">
-                        <a href="#" class="featured__info">
+                        <a href="./view.html" class="featured__info">
                             Mango People T-shirt
                         </a>
                         <div class="featured__price text-rose">
@@ -223,15 +622,17 @@
             </div>
             <div class="col-md-3">
                 <div class="featured__item">
-                    <a href="#" class="image-wrapper">
-                        <button class="button button-transparent">
-                            <img alt="basket" class="basket" src="./images/basket_white.svg">
-                            Add to Cart
-                        </button>
+                    <a href="./view.html" class="image-wrapper">
+                        <div class="featured__buttons">
+                            <button class="button button-transparent">
+                                <img alt="basket" class="basket" src="./images/basket_white.svg">
+                                Add to Cart
+                            </button>
+                        </div>
                         <div class="featured__image" style="background-image: url('./images/featured3.jpg')"></div>
                     </a>
                     <div class="featured__text">
-                        <a href="#" class="featured__info">
+                        <a href="./view.html" class="featured__info">
                             Mango People T-shirt
                         </a>
                         <div class="featured__price text-rose">
@@ -242,15 +643,17 @@
             </div>
             <div class="col-md-3">
                 <div class="featured__item">
-                    <a href="#" class="image-wrapper">
-                        <button class="button button-transparent">
-                            <img alt="basket" class="basket" src="./images/basket_white.svg">
-                            Add to Cart
-                        </button>
+                    <a href="./view.html" class="image-wrapper">
+                        <div class="featured__buttons">
+                            <button class="button button-transparent">
+                                <img alt="basket" class="basket" src="./images/basket_white.svg">
+                                Add to Cart
+                            </button>
+                        </div>
                         <div class="featured__image" style="background-image: url('./images/featured4.jpg')"></div>
                     </a>
                     <div class="featured__text">
-                        <a href="#" class="featured__info">
+                        <a href="./view.html" class="featured__info">
                             Mango People T-shirt
                         </a>
                         <div class="featured__price text-rose">
@@ -261,15 +664,17 @@
             </div>
             <div class="col-md-3">
                 <div class="featured__item">
-                    <a href="#" class="image-wrapper">
-                        <button class="button button-transparent">
-                            <img alt="basket" class="basket" src="./images/basket_white.svg">
-                            Add to Cart
-                        </button>
+                    <a href="./view.html" class="image-wrapper">
+                        <div class="featured__buttons">
+                            <button class="button button-transparent">
+                                <img alt="basket" class="basket" src="./images/basket_white.svg">
+                                Add to Cart
+                            </button>
+                        </div>
                         <div class="featured__image" style="background-image: url('./images/featured5.jpg')"></div>
                     </a>
                     <div class="featured__text">
-                        <a href="#" class="featured__info">
+                        <a href="./view.html" class="featured__info">
                             Mango People T-shirt
                         </a>
                         <div class="featured__price text-rose">
@@ -280,15 +685,17 @@
             </div>
             <div class="col-md-3">
                 <div class="featured__item">
-                    <a href="#" class="image-wrapper">
-                        <button class="button button-transparent">
-                            <img alt="basket" class="basket" src="./images/basket_white.svg">
-                            Add to Cart
-                        </button>
+                    <a href="./view.html" class="image-wrapper">
+                        <div class="featured__buttons">
+                            <button class="button button-transparent">
+                                <img alt="basket" class="basket" src="./images/basket_white.svg">
+                                Add to Cart
+                            </button>
+                        </div>
                         <div class="featured__image" style="background-image: url('./images/featured6.jpg')"></div>
                     </a>
                     <div class="featured__text">
-                        <a href="#" class="featured__info">
+                        <a href="./view.html" class="featured__info">
                             Mango People T-shirt
                         </a>
                         <div class="featured__price text-rose">
@@ -299,15 +706,17 @@
             </div>
             <div class="col-md-3">
                 <div class="featured__item">
-                    <a href="#" class="image-wrapper">
-                        <button class="button button-transparent">
-                            <img alt="basket" class="basket" src="./images/basket_white.svg">
-                            Add to Cart
-                        </button>
+                    <a href="./view.html" class="image-wrapper">
+                        <div class="featured__buttons">
+                            <button class="button button-transparent">
+                                <img alt="basket" class="basket" src="./images/basket_white.svg">
+                                Add to Cart
+                            </button>
+                        </div>
                         <div class="featured__image" style="background-image: url('./images/featured7.jpg')"></div>
                     </a>
                     <div class="featured__text">
-                        <a href="#" class="featured__info">
+                        <a href="./view.html" class="featured__info">
                             Mango People T-shirt
                         </a>
                         <div class="featured__price text-rose">
@@ -318,15 +727,17 @@
             </div>
             <div class="col-md-3">
                 <div class="featured__item">
-                    <a href="#" class="image-wrapper">
-                        <button class="button button-transparent">
-                            <img alt="basket" class="basket" src="./images/basket_white.svg">
-                            Add to Cart
-                        </button>
+                    <a href="./view.html" class="image-wrapper">
+                        <div class="featured__buttons">
+                            <button class="button button-transparent">
+                                <img alt="basket" class="basket" src="./images/basket_white.svg">
+                                Add to Cart
+                            </button>
+                        </div>
                         <div class="featured__image" style="background-image: url('./images/featured8.jpg')"></div>
                     </a>
                     <div class="featured__text">
-                        <a href="#" class="featured__info">
+                        <a href="./view.html" class="featured__info">
                             Mango People T-shirt
                         </a>
                         <div class="featured__price text-rose">
