@@ -19,6 +19,7 @@ $darkGray: #838383;
 $borderGray: #cdcdcc;
 $textGray: #b9b9b9;
 $lightGray: #e6e6e6;
+$boxBorder: #e9e9e9;
 $slGray: #eaeaea;
 $white: #ffffff;
 $darkPlaceholder: #222224;
@@ -116,6 +117,25 @@ body {
   font-size: 14px;
 }
 
+a {
+  @include transition(color 300ms linear);
+  background-color: transparent;
+  text-decoration: none;
+  &:hover {
+    color: $rose;
+    @include transition(color 300ms linear);
+  }
+}
+
+hr {
+  border: 0;
+  border-top: 1px solid $slGray;
+}
+
+div {
+  display: block;
+}
+
 main {
   display: block;
 }
@@ -133,10 +153,6 @@ hr {
 pre {
   font-family: monospace, monospace;
   font-size: 1em;
-}
-
-a {
-  background-color: transparent;
 }
 
 abbr[title] {
@@ -329,22 +345,6 @@ input:-moz-placeholder {
 }
 
 //Main styles
-a {
-  @include transition(color 300ms linear);
-
-  &:hover {
-    @include transition(color 300ms linear);
-  }
-}
-
-hr {
-  border: 0;
-  border-top: 1px solid $slGray;
-}
-
-div {
-  display: block;
-}
 
 .button {
   border: 1px solid transparent;
@@ -433,7 +433,20 @@ div {
     @include transition(linear-gradient 300ms linear);
   }
 }
-
+.drop-wrap{
+  position: relative;
+  height: 18px;
+  border-right: 0;
+  .drop-menu {
+    @include shadow(0 3px 6px rgba(0, 0, 0, 0.08));
+    position: absolute;
+    z-index: 3;
+    display: block;
+    background: #fff;
+    padding: 20px;
+    top: 50px;
+  }
+}
 .select {
   position: relative;
 
@@ -449,7 +462,7 @@ div {
 
   .select-selected {
     color: $mainColor;
-    padding: 10px 12px;
+    padding: 10px 30px 10px 12px;
     cursor: pointer;
     user-select: none;
     display: flex;
@@ -458,7 +471,7 @@ div {
     border: 1px solid $borderGray;
     border-radius: 4px 0 0 4px;
     border-right: 0;
-    min-width: 85px;
+    min-width: 25px;
 
     &:after {
       position: absolute;
@@ -593,7 +606,7 @@ div {
       color: $darkGray;
       background: $white;
       border-radius: 0;
-      padding: 1px 10px;
+      padding: 1px 30px 1px 12px;
       &:after {
         border: 4px solid transparent;
         border-top-color: $darkGray;
@@ -626,6 +639,51 @@ div {
 
         &:hover {
           background: $lightGray;
+        }
+      }
+    }
+  }
+
+  &.mega-select{
+    .select-items{
+      width: 262px;
+      padding: 20px;
+      background: $white;
+      border: 1px solid $boxBorder;
+      border-radius: 5px;
+      @include shadow(0 3px 6px rgba(0, 0, 0, 0.08));
+      &:before{
+        content: "";
+        position: absolute;
+        width: 10px;
+        top: -6px;
+        z-index: -1;
+        border-left: 1px solid $boxBorder;
+        border-top: 1px solid $boxBorder;
+        left: 67px;
+        height: 10px;
+        background: $white;
+        transform: rotate(45deg);
+      }
+    }
+    .select__option{
+      white-space: pre-wrap;
+      background: $white;
+      border: transparent;
+      margin: 0px -1px 0px 0px;
+      cursor: pointer;
+      &:hover{
+        background-color: transparent;
+        color: $rose;
+      }
+      &.select__section-name {
+        white-space: nowrap;
+        margin: 5px -5px 0;
+        font-weight: 400;
+        text-transform: uppercase;
+        border-bottom: 1px solid $borderGray;
+        &:first-child{
+          margin: -10px -5px 0;
         }
       }
     }
@@ -878,7 +936,17 @@ div {
   margin-left: 8px;
 }
 
-@mixin range-slider($width, $height, $input-top, $input-bg-color, $input-thumb-color, $float:none, $input-height:10px, $input-border-radius:3px, $thumb-border-radius:10px) {
+@mixin range-slider(
+  $width,
+  $height,
+  $input-top,
+  $input-bg-color,
+  $input-thumb-color,
+  $float:none,
+  $input-height:10px,
+  $input-border-radius:3px,
+  $thumb-border-radius:10px
+) {
   position: relative;
   width: $width;
   height: $height;
@@ -1047,14 +1115,114 @@ section.range-slider {
     justify-content: center;
 
     li {
-      a.nav__link {
+      .nav__link {
         color: $mainColor;
+        position: relative;
         font-weight: 700;
         text-decoration: none;
         padding: 10px 20px;
+        display: inline;
+        text-transform: uppercase;
+        cursor: pointer;
+        .nav__drop-menu {
+          transition: 500ms;
+          opacity: 0;
+          display: flex;
+          position: absolute;
+          visibility: hidden;
+          text-transform: none;
+          z-index: 3;
+          top: 43px;
+          left: -7px;
+          background: $white;
+          border-radius: 5px;
+          padding: 10px 25px 21px;
+          border: 1px solid $borderGray;
+          @include shadow(0 3px 6px rgba(0, 0, 0, 0.08));
+          .nav__drop-section{
+            width: 235px;
+            margin-right: 46px;
+            &:last-child{
+              margin-right: 0;
+            }
+            .drop-section__name{
+              font-weight: 400;
+              line-height: 32px;
+              margin-bottom: 16px;
+              text-transform: uppercase;
+              border-bottom: 1px solid $borderGray;
+              margin-top: 9px;
+              &:first-child {
+                margin-top: 0;
+              }
+            }
+          }
+          ul {
+            list-style: none;
+            display: block;
+            li {
+              display: block;
+              a{
+                line-height: 28px;
+                font-weight: 400;
+                color: $darkGray;
+                &:hover{
+                  color: $rose;
+                }
+              }
+            }
+          }
 
+          .drop-section__sale {
+            display: block;
+            margin: 22px 0 0 -17px;
+            position: relative;
+            .drop-section__sale-image{
+              width: 100%;
+            }
+            .drop-section__sale-text {
+              position: absolute;
+              width: 70px;
+              text-transform: uppercase;
+              font-size: 22px;
+              color: $white;
+              bottom: 12px;
+              right: 10px;
+            }
+          }
+
+          &:before {
+            content: "";
+            position: absolute;
+            width: 10px;
+            top: -6px;
+            z-index: -1;
+            border-left: 1px solid $boxBorder;
+            border-top: 1px solid $boxBorder;
+            left: 59px;
+            height: 10px;
+            background: $white;
+            transform: rotate(45deg);
+          }
+        }
         &:hover {
-          color: $rose;
+          .nav__drop-menu{
+            opacity: 1;
+            visibility: visible;
+          }
+        }
+      }
+      &:nth-of-type(n+5){
+        color: red;
+        .nav__link {
+          .nav__drop-menu {
+            left: inherit;
+            right: -7px;
+            &:before {
+              left: inherit;
+              right: 59px;
+            }
+          }
         }
       }
     }
