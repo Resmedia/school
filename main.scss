@@ -783,9 +783,11 @@ input:-moz-placeholder {
 .text-rose {
   color: $rose;
 }
-.text-red{
+
+.text-red {
   color: red;
 }
+
 .text-gray {
   color: $textGray;
 }
@@ -978,6 +980,7 @@ input:-moz-placeholder {
   border-top: 4px solid $darkGray;
   margin-left: 8px;
 }
+
 .radio-box {
   display: block;
   position: relative;
@@ -989,7 +992,8 @@ input:-moz-placeholder {
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
-  .radio-box__label{
+
+  .radio-box__label {
     position: relative;
     margin: -6px 0 0 0;
     text-transform: uppercase;
@@ -1042,6 +1046,7 @@ input:-moz-placeholder {
     background: $mainColor;
   }
 }
+
 @mixin range-slider(
   $width,
   $height,
@@ -2561,11 +2566,12 @@ footer {
       text-transform: uppercase;
       margin-bottom: 22px;
     }
-    hr{
+
+    hr {
       margin-bottom: 17px;
     }
 
-    .button{
+    .button {
       width: 100%;
       display: block;
       padding: 19px 42px;
@@ -2586,25 +2592,30 @@ footer {
     height: 45px;
   }
 }
-.checkout{
-  .checkout__content{
+
+.checkout {
+  .checkout__content {
     display: flex;
     padding-bottom: 79px;
-    .checkout__name{
+
+    .checkout__name {
       font-size: 13px;
       font-weight: 400;
       text-transform: uppercase;
       margin-bottom: 15px;
     }
-    .checkout__radio-group{
+
+    .checkout__radio-group {
       margin-top: 34px;
       margin-bottom: 34px;
     }
+
     .checkout__info-box {
       margin: 30px 0 35px;
       line-height: 2;
     }
-    .button{
+
+    .button {
       padding: 19px 53px;
       text-align: center;
       text-transform: uppercase;
@@ -2613,37 +2624,44 @@ footer {
       height: 50px;
     }
   }
-  .registration{
+
+  .registration {
     label {
       display: block;
       margin-top: 23px;
       margin-bottom: 16px;
       font-weight: 400;
     }
-    .form-control{
+
+    .form-control {
       width: 390px;
     }
 
-    .checkout__button-group{
+    .checkout__button-group {
       display: flex;
       align-items: center;
-      .button{
+
+      .button {
         margin-right: 10px;
       }
     }
-    .warning-text{
+
+    .warning-text {
       font-size: 13px;
       font-weight: 400;
       margin: 22px 0 32px;
     }
   }
-  details{
+
+  details {
     border-bottom: 1px solid $slGray;
   }
+
   summary::-webkit-details-marker {
     display: none
   }
-  summary{
+
+  summary {
     margin-bottom: 33px;
     margin-top: 33px;
     font-size: 16px;
