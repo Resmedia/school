@@ -1216,6 +1216,7 @@ section.range-slider {
         margin-top: 26px;
         text-transform: uppercase; }
         .main-block .main-block__offer .offer__item .offer__text .offer__info {
+          color: #222222;
           font-size: 18px;
           font-weight: 400; }
         .main-block .main-block__offer .offer__item .offer__text .offer__type {
