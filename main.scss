@@ -126,6 +126,18 @@ $transition: none;
 .icon-facebook:before {
   content: "\e906";
 }
+.icon-times-circle{
+  cursor: pointer;
+  transform: scale(1, 1) rotate(0deg);
+  transition-duration: 300ms;
+  transition-delay: 50ms;
+  &:hover{
+    color: $rose;
+    transform: scale(1.7, 1.7) rotate(90deg);
+    transition-duration: 300ms;
+    transition-delay: 50ms;
+  }
+}
 
 // Normalize
 html {
@@ -1758,6 +1770,7 @@ section.range-slider {
   }
 
   &:hover {
+    transform: scale(1.02, 1.02);
     @include shadow(0 5px 8px rgba(0, 0, 0, 0.16));
 
     .image-wrapper {
@@ -2277,7 +2290,44 @@ footer {
     padding-bottom: 50px;
     display: flex;
     align-items: center;
+    overflow: hidden;
     justify-content: space-between;
+    img{
+      animation: imageTransform 10s infinite linear;
+      backface-visibility: hidden;
+    }
+    @keyframes imageTransform {
+      0% {
+        opacity: 1;
+        transform: translateX(0px) translateY(0px) rotate(0deg) scale(1, 1);
+        animation-timing-function: linear;
+      }
+      50% {
+        opacity: 1;
+        transform: translateX(0px) translateY(0px) rotate(0deg) scale(1.1, 1.1);
+        animation-timing-function: linear;
+      }
+      100% {
+        opacity: 1;
+        transform: translateX(0px) translateY(0px) rotate(0deg) scale(1, 1);
+      }
+    }
+    @-webkit-keyframes imageTransform {
+      0% {
+        opacity: 1;
+        transform: translateX(0px) translateY(0px) rotate(0deg) scale(1, 1);
+        animation-timing-function: linear;
+      }
+      50% {
+        opacity: 1;
+        transform: translateX(0px) translateY(0px) rotate(0deg) scale(1.1, 1.1);
+        animation-timing-function: linear;
+      }
+      100% {
+        opacity: 1;
+        transform: translateX(0px) translateY(0px) rotate(0deg) scale(1, 1);
+      }
+    }
 
     .arrival__slider-left,
     .arrival__slider-right {
