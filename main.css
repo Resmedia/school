@@ -94,6 +94,14 @@ body {
   font-weight: 300;
   font-size: 14px; }
 
+.wrapper {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column; }
+
+.body {
+  flex-grow: 1; }
+
 a {
   -webkit-transition: color 300ms linear;
   -khtml-transition: color 300ms linear;
