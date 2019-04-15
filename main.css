@@ -69,6 +69,17 @@
 .icon-facebook:before {
   content: "\e906"; }
 
+.icon-times-circle {
+  cursor: pointer;
+  transform: scale(1, 1) rotate(0deg);
+  transition-duration: 300ms;
+  transition-delay: 50ms; }
+  .icon-times-circle:hover {
+    color: #f16d7f;
+    transform: scale(1.7, 1.7) rotate(90deg);
+    transition-duration: 300ms;
+    transition-delay: 50ms; }
+
 html {
   line-height: 1.15;
   -webkit-text-size-adjust: 100%; }
@@ -82,6 +93,14 @@ body {
   font-family: Lato, serif;
   font-weight: 300;
   font-size: 14px; }
+
+.wrapper {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column; }
+
+.body {
+  flex-grow: 1; }
 
 a {
   -webkit-transition: color 300ms linear;
@@ -1328,6 +1347,7 @@ section.range-slider {
       -o-transition: all 300ms linear;
       transition: all 300ms linear; }
   .featured__item:hover {
+    transform: scale(1.02, 1.02);
     -webkit-box-shadow: 0 5px 8px rgba(0, 0, 0, 0.16);
     -moz-box-shadow: 0 5px 8px rgba(0, 0, 0, 0.16);
     box-shadow: 0 5px 8px rgba(0, 0, 0, 0.16); }
@@ -1668,7 +1688,35 @@ footer .copyright {
   padding-bottom: 50px;
   display: flex;
   align-items: center;
+  overflow: hidden;
   justify-content: space-between; }
+  .arrival .arrival__slider img {
+    animation: imageTransform 10s infinite linear;
+    backface-visibility: hidden; }
+@keyframes imageTransform {
+  0% {
+    opacity: 1;
+    transform: translateX(0px) translateY(0px) rotate(0deg) scale(1, 1);
+    animation-timing-function: linear; }
+  50% {
+    opacity: 1;
+    transform: translateX(0px) translateY(0px) rotate(0deg) scale(1.1, 1.1);
+    animation-timing-function: linear; }
+  100% {
+    opacity: 1;
+    transform: translateX(0px) translateY(0px) rotate(0deg) scale(1, 1); } }
+@-webkit-keyframes imageTransform {
+  0% {
+    opacity: 1;
+    transform: translateX(0px) translateY(0px) rotate(0deg) scale(1, 1);
+    animation-timing-function: linear; }
+  50% {
+    opacity: 1;
+    transform: translateX(0px) translateY(0px) rotate(0deg) scale(1.1, 1.1);
+    animation-timing-function: linear; }
+  100% {
+    opacity: 1;
+    transform: translateX(0px) translateY(0px) rotate(0deg) scale(1, 1); } }
   .arrival .arrival__slider .arrival__slider-left,
   .arrival .arrival__slider .arrival__slider-right {
     background: #eaeaea;
